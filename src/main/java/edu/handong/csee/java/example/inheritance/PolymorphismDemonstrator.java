@@ -13,5 +13,15 @@ public class PolymorphismDemonstrator {
 			p.writeOutput();
 			System.out.println();
 		}
+		
+		Undergraduate ug = new Undergraduate("Nam, JC", 1111, 4);
+		Student st = ug;
+		Person ps = ug;
+		Object obj = ug;
+		
+		st.writeOutput();
+		ps.writeOutput();
+		System.out.println(obj.toString());
+
 	}
 }
