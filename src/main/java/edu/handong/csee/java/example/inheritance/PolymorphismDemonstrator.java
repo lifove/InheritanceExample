@@ -10,7 +10,14 @@ public class PolymorphismDemonstrator {
 		people[3] = new Undergraduate("Bugg, June", 9901, 4);
 
 		for (Person p : people) {
-			p.writeOutput();
+			System.out.println("Student Name: " + p.getName());
+			
+			// we can call getLevel only in Undergraduate by casting p (Person).
+			// However, before cating we need to check if p is actually Undergraduate type by using 'instanceof'
+			if(p instanceof Undergraduate){ 
+				Undergraduate studentObj = (Undergraduate) p;
+				System.out.println("Student Level: " + studentObj.getLevel());
+			}
 			System.out.println();
 		}
 		
